@@ -2,7 +2,7 @@ import gurobipy as gp
 import numpy as np
 import os
 
-if not os.path.exist('./generated'):
+if not os.path.exists('./generated'):
     os.mkdir('./generated')
 
 
