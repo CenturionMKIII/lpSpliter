@@ -1,5 +1,11 @@
 import gurobipy as gp
 import numpy as np
+import os
+
+if not os.path.exist('./generated'):
+    os.mkdir('./generated')
+
+
 
 nCol = 1000
 
