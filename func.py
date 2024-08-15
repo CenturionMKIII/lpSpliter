@@ -1,8 +1,9 @@
 import gurobipy as gp
 import numpy as np
 
+nCol = 1000
 
-def read_A(fnm='./cont1.mps'):
+def read_A(fnm='./zib03.mps.gz'):
     model = gp.read(fnm)
     A = model.getA()
     bounds = []
@@ -98,7 +99,6 @@ def gen_mps(indx,vals,m,n,rhs,lb,ub,c,nins=0):
 
 
 
-nCol = 1000
 A,bounds, b, c = read_A()  
 
 total_iter = A.shape[1]//nCol
